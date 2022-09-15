@@ -1,20 +1,23 @@
 package com.company;
 
+import com.company.datosavanzados.Leccion070809;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 
+
 public class Main {
 
     public static void main(String[] args) {
-        invertirCadena();
-        ejemploArray();
+
         ejemploArrayList();
         ejemploLinkedList();
         ejemploBigDecimal();
         ejemploMapa();
+
 
 
     }
@@ -67,28 +70,4 @@ public class Main {
         System.out.println(lista + " " + lista.size());
     }
 
-    private static void ejemploArray() {
-        int arrayUno[] = new int[6];
-
-        //rellenando arr
-        for (int i = 0; i < arrayUno.length; i++) {
-            arrayUno[i]=i*10;
-        }
-
-        //mostrando array
-        for (int i = 0; i < arrayUno.length; i++) {
-            System.out.println(arrayUno[i]);
-        }
-    }
-
-    private static void invertirCadena() {
-        String prueba = "cadena";
-        String resultado = "";
-        System.out.println(prueba);
-
-        for (int i = prueba.length() - 1; i >= 0; i--) {
-            resultado = resultado.concat(String.valueOf(prueba.charAt(i)));
-        }
-        System.out.println(resultado);
-    }
 }
