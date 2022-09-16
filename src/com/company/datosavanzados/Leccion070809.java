@@ -1,14 +1,13 @@
 package com.company.datosavanzados;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Vector;
 
 public class Leccion070809 {
     public static void main(String[] args) {
         /*
 
-
-        Crea un ArrayList de tipo String, con 4 elementos. Cópialo en una LinkedList. Recorre ambos mostrando únicamente el valor de cada elemento.
-        Crea un ArrayList de tipo int, y, utilizando un bucle rellénalo con elementos 1..10. A continuación, con otro bucle, recórrelo y elimina los numeros pares. Por último, vuelve a recorrerlo y muestra el ArrayList final. Si te atreves, puedes hacerlo en menos pasos, siempre y cuando cumplas el primer "for" de relleno.
         Crea una función DividePorCero. Esta, debe generar una excepción ("throws") a su llamante del tipo ArithmeticException que será capturada por su llamante (desde "main", por ejemplo). Si se dispara la excepción, mostraremos el mensaje "Esto no puede hacerse". Finalmente, mostraremos en cualquier caso: "Demo de código".
         Utilizando InputStream y PrintStream, crea una función que reciba dos parámetros: "fileIn" y "fileOut". La tarea de la función será realizar la copia del fichero dado en el parámetro "fileIn" al fichero dado en "fileOut".
         Sorpréndenos creando un programa de tu elección que utilice InputStream, PrintStream, excepciones, un HashMap y un ArrayList, LinkedList o array.
@@ -27,8 +26,36 @@ public class Leccion070809 {
         //ejecicioVector();
 
         // 5. Indica cuál es el problema de utilizar un Vector con la capacidad por defecto si tuviésemos 1000 elementos para ser añadidos al mismo.
+        /*
+        Cada vez que el vector alcanza su capacidad máxima y la supera, crea un nuevo array con el doble de capacidad.
+        Si añadimos un nuevo elemento al vector con 1000 elementos, creará otro de 2000, existiendo por un momento 2 arrays en memoria y consumiendo recursos computacionales por duplicado.
+         */
+
+        // 6. Crea un ArrayList de tipo String, con 4 elementos. Cópialo en una LinkedList. Recorre ambos mostrando únicamente el valor de cada elemento.
+        //ejemploArrayList();
+
+        // 7. Crea un ArrayList de tipo int, y, utilizando un bucle rellénalo con elementos 1..10.
+        // A continuación, con otro bucle, recórrelo y elimina los numeros pares.
+        // Por último, vuelve a recorrerlo y muestra el ArrayList final.
+        // Si te atreves, puedes hacerlo en menos pasos, siempre y cuando cumplas el primer "for" de relleno.
 
 
+
+
+    }
+
+    private static void ejemploArrayList() {
+        ArrayList<String> lista=new ArrayList<String>();
+
+        lista.add("A");
+        lista.add("B");
+        lista.add("C");
+        lista.add("D");
+
+        LinkedList<String> listaEnlazada=new LinkedList<>(lista);
+
+        System.out.println(lista);
+        System.out.println(listaEnlazada);
     }
 
     private static void ejecicioVector() {
@@ -36,10 +63,14 @@ public class Leccion070809 {
         for (int i = 0; i < 5; i++) {
             nuevoVector.add("Elemento " + i);
         }
+
         nuevoVector.remove(2);
         nuevoVector.remove(3);
 
         System.out.println(nuevoVector);
+
+        System.out.println(nuevoVector.capacity());
+        System.out.println(nuevoVector.size());
     }
 
     private static void ejemploArray2() {
