@@ -38,10 +38,28 @@ public class Leccion070809 {
         // A continuación, con otro bucle, recórrelo y elimina los numeros pares.
         // Por último, vuelve a recorrerlo y muestra el ArrayList final.
         // Si te atreves, puedes hacerlo en menos pasos, siempre y cuando cumplas el primer "for" de relleno.
+        //ejemploArrayList2();
 
 
+    }
 
+    private static void ejemploArrayList2() {
+        ArrayList<Integer> arrayNumeros=new ArrayList<>();
+        for (int i = 0; i<10;i++){
+            arrayNumeros.add(i+1);
+        }
+        System.out.println("ArrayList original: " + arrayNumeros);
 
+        for (int i = arrayNumeros.size() -1; i>=0;i--){
+            if (arrayNumeros.get(i) % 2 == 0){
+                arrayNumeros.remove(i);
+            }
+        }
+        System.out.println("ArrayList sin pares: " + arrayNumeros);
+
+        for (int i = 0; i<arrayNumeros.size() -1;i++){
+            System.out.println(arrayNumeros.get(i));
+        }
     }
 
     private static void ejemploArrayList() {
