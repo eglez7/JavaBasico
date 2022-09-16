@@ -9,7 +9,7 @@ public class Leccion070809 {
     public static void main(String[] args) {
         /*
 
-        Sorpréndenos creando un programa de tu elección que utilice InputStream, PrintStream, excepciones, un HashMap y un ArrayList, LinkedList o array.
+
          */
 
         // 1. Escribe el código que devuelva una cadena al revés. Por ejemplo, la cadena "hola mundo", debe retornar "odnum aloh".
@@ -47,6 +47,11 @@ public class Leccion070809 {
 
         // 9. Utilizando InputStream y PrintStream, crea una función que reciba dos parámetros: "fileIn" y "fileOut".
         // La tarea de la función será realizar la copia del fichero dado en el parámetro "fileIn" al fichero dado en "fileOut".
+
+
+        // 10. Sorpréndenos creando un programa de tu elección
+        // que utilice InputStream, PrintStream, excepciones, un HashMap y un ArrayList, LinkedList o array.
+
 
 
     }
