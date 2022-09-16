@@ -4,12 +4,11 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Vector;
 
+
 public class Leccion070809 {
     public static void main(String[] args) {
         /*
 
-        Crea una función DividePorCero. Esta, debe generar una excepción ("throws") a su llamante del tipo ArithmeticException que será capturada por su llamante (desde "main", por ejemplo). Si se dispara la excepción, mostraremos el mensaje "Esto no puede hacerse". Finalmente, mostraremos en cualquier caso: "Demo de código".
-        Utilizando InputStream y PrintStream, crea una función que reciba dos parámetros: "fileIn" y "fileOut". La tarea de la función será realizar la copia del fichero dado en el parámetro "fileIn" al fichero dado en "fileOut".
         Sorpréndenos creando un programa de tu elección que utilice InputStream, PrintStream, excepciones, un HashMap y un ArrayList, LinkedList o array.
          */
 
@@ -40,6 +39,37 @@ public class Leccion070809 {
         // Si te atreves, puedes hacerlo en menos pasos, siempre y cuando cumplas el primer "for" de relleno.
         //ejemploArrayList2();
 
+        // 8. Crea una función DividePorCero.
+        // Esta, debe generar una excepción ("throws") a su llamante del tipo ArithmeticException
+        // que será capturada por su llamante (desde "main", por ejemplo). Si se dispara la excepción,
+        // mostraremos el mensaje "Esto no puede hacerse". Finalmente, mostraremos en cualquier caso: "Demo de código".
+        //dividiendoPorCero();
+
+        // 9. Utilizando InputStream y PrintStream, crea una función que reciba dos parámetros: "fileIn" y "fileOut".
+        // La tarea de la función será realizar la copia del fichero dado en el parámetro "fileIn" al fichero dado en "fileOut".
+
+
+    }
+
+    private static void dividiendoPorCero() {
+        try {
+            System.out.println(divideDosNumeros(5,0));
+        } catch (ArithmeticException e){
+            System.out.println("Esto no puede hacerse");
+        } finally {
+            System.out.println("Demo de código");
+        }
+    }
+
+    private static double divideDosNumeros(int numeroA, int numeroB) throws ArithmeticException
+    {
+        double resultado=0;
+        try{
+            resultado=numeroA/numeroB;
+        } catch (ArithmeticException e){
+            throw new ArithmeticException();
+        }
+        return resultado;
 
     }
 
