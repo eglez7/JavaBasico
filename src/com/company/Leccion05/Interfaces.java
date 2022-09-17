@@ -1,6 +1,6 @@
-package com.company.interfaces;
+package com.company.Leccion05;
 
-public class Leccion05 {
+public class Interfaces {
     public static void main(String[] args) {
         /*
         Crear una interfaz CocheCRUD.

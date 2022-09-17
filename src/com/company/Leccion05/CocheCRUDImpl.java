@@ -1,4 +1,4 @@
-package com.company.interfaces;
+package com.company.Leccion05;
 
 public class CocheCRUDImpl implements CocheCRUD{
 

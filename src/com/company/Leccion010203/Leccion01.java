@@ -1,4 +1,4 @@
-package com.company.basico;
+package com.company.Leccion010203;
 
 public class Leccion01 {
     public static void main(String[] args) {

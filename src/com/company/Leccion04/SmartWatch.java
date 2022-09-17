@@ -1,4 +1,4 @@
-package com.company.poo;
+package com.company.Leccion04;
 
 public class SmartWatch  extends SmartDevice{
     String formaEsfera;
