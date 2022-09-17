@@ -1,32 +1,36 @@
 package com.company.Leccion070809;
 
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 public class EjercicioPersonal {
+
+    public static final String FICHERO_TXT = "fichero.txt";
+
     public static void main(String[] args) {
-// 10. Sorpréndenos creando un programa de tu elección
-        // que utilice InputStream, PrintStream, excepciones, un HashMap y un ArrayList, LinkedList o array.
+        // 10. Sorpréndenos creando un programa de tu elección que utilice InputStream, PrintStream, excepciones, un HashMap y un ArrayList, LinkedList o array.
 
         try {
-            //Abro stream, crea el fichero si no existe
-            FileWriter fw = new FileWriter("D:\\fichero1.txt");
-            //Escribimos en el fichero un String y un caracter 97 (a)
-            fw.write("Esto es una prueb");
-            fw.write(97);
-            //Cierro el stream
-            fw.close();
-            //Abro el stream, el fichero debe existir
-            FileReader fr = new FileReader("D:\\fichero1.txt");
-            //Leemos el fichero y lo mostramos por pantalla
-            int valor = fr.read();
-            while (valor != -1) {
-                System.out.print((char) valor);
-                valor = fr.read();
+            FileWriter ficheroOUT = new FileWriter(FICHERO_TXT);
+            BufferedWriter ficheroOUTBuffer = new BufferedWriter(ficheroOUT);
+            ficheroOUTBuffer.write("Esto es una prueba");
+            ficheroOUTBuffer.newLine();
+            ficheroOUTBuffer.write("Esto es otra una prueba");
+            ficheroOUTBuffer.flush();
+            ficheroOUT.close();
+
+            FileReader ficheroIN = new FileReader(FICHERO_TXT);
+            BufferedReader ficheroINBuffer = new BufferedReader(ficheroIN);
+
+
+            String linea =ficheroINBuffer.readLine();
+            while(linea != null){
+                System.out.println(linea);
+                linea=ficheroINBuffer.readLine();
             }
-            //Cerramos el stream
-            fr.close();
+
+
+            ficheroIN.close();
+
         } catch (IOException e) {
             System.out.println("Error E/S: " + e);
         }
